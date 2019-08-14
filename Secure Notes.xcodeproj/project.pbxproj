@@ -8,22 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		D1B8BDE32304C7A6009A454C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B8BDE22304C7A6009A454C /* AppDelegate.swift */; };
-		D1B8BDE52304C7A6009A454C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B8BDE42304C7A6009A454C /* ViewController.swift */; };
+		D1B8BDE52304C7A6009A454C /* NotesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B8BDE42304C7A6009A454C /* NotesVC.swift */; };
 		D1B8BDE82304C7A6009A454C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1B8BDE62304C7A6009A454C /* Main.storyboard */; };
 		D1B8BDEB2304C7A6009A454C /* Secure_Notes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D1B8BDE92304C7A6009A454C /* Secure_Notes.xcdatamodeld */; };
 		D1B8BDED2304C7A6009A454C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1B8BDEC2304C7A6009A454C /* Assets.xcassets */; };
 		D1B8BDF02304C7A6009A454C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1B8BDEE2304C7A6009A454C /* LaunchScreen.storyboard */; };
+		D1B8BDFD2304CC31009A454C /* CreateNoteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B8BDFC2304CC31009A454C /* CreateNoteVC.swift */; };
+		D1B8BDFF2304CC57009A454C /* NoteDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B8BDFE2304CC57009A454C /* NoteDetailsVC.swift */; };
+		D1B8BE032304CC9B009A454C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B8BE022304CC9B009A454C /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D1B8BDDF2304C7A6009A454C /* Secure Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Secure Notes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1B8BDE22304C7A6009A454C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D1B8BDE42304C7A6009A454C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D1B8BDE42304C7A6009A454C /* NotesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesVC.swift; sourceTree = "<group>"; };
 		D1B8BDE72304C7A6009A454C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D1B8BDEA2304C7A6009A454C /* Secure_Notes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Secure_Notes.xcdatamodel; sourceTree = "<group>"; };
 		D1B8BDEC2304C7A6009A454C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D1B8BDEF2304C7A6009A454C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D1B8BDF12304C7A6009A454C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D1B8BDFC2304CC31009A454C /* CreateNoteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNoteVC.swift; sourceTree = "<group>"; };
+		D1B8BDFE2304CC57009A454C /* NoteDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailsVC.swift; sourceTree = "<group>"; };
+		D1B8BE022304CC9B009A454C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +62,12 @@
 		D1B8BDE12304C7A6009A454C /* Secure Notes */ = {
 			isa = PBXGroup;
 			children = (
+				D1B8BE012304CC84009A454C /* Utilities */,
+				D1B8BDFA2304C7E3009A454C /* Enum */,
+				D1B8BDF92304C7D3009A454C /* Model */,
+				D1B8BDF82304C7C8009A454C /* View */,
+				D1B8BDF72304C7B9009A454C /* Controller */,
 				D1B8BDE22304C7A6009A454C /* AppDelegate.swift */,
-				D1B8BDE42304C7A6009A454C /* ViewController.swift */,
 				D1B8BDE62304C7A6009A454C /* Main.storyboard */,
 				D1B8BDEC2304C7A6009A454C /* Assets.xcassets */,
 				D1B8BDEE2304C7A6009A454C /* LaunchScreen.storyboard */,
@@ -65,6 +75,53 @@
 				D1B8BDE92304C7A6009A454C /* Secure_Notes.xcdatamodeld */,
 			);
 			path = "Secure Notes";
+			sourceTree = "<group>";
+		};
+		D1B8BDF72304C7B9009A454C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D1B8BDE42304C7A6009A454C /* NotesVC.swift */,
+				D1B8BDFC2304CC31009A454C /* CreateNoteVC.swift */,
+				D1B8BDFE2304CC57009A454C /* NoteDetailsVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D1B8BDF82304C7C8009A454C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D1B8BE002304CC7A009A454C /* Cells */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D1B8BDF92304C7D3009A454C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D1B8BDFA2304C7E3009A454C /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
+		D1B8BE002304CC7A009A454C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		D1B8BE012304CC84009A454C /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				D1B8BE022304CC9B009A454C /* Constants.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +195,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D1B8BDE52304C7A6009A454C /* ViewController.swift in Sources */,
+				D1B8BDE52304C7A6009A454C /* NotesVC.swift in Sources */,
+				D1B8BDFD2304CC31009A454C /* CreateNoteVC.swift in Sources */,
+				D1B8BDFF2304CC57009A454C /* NoteDetailsVC.swift in Sources */,
 				D1B8BDE32304C7A6009A454C /* AppDelegate.swift in Sources */,
 				D1B8BDEB2304C7A6009A454C /* Secure_Notes.xcdatamodeld in Sources */,
+				D1B8BE032304CC9B009A454C /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +349,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KC7AXFA778;
 				INFOPLIST_FILE = "Secure Notes/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -296,7 +357,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Kotb.Secure-Notes";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -307,6 +368,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KC7AXFA778;
 				INFOPLIST_FILE = "Secure Notes/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -314,7 +376,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Kotb.Secure-Notes";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
