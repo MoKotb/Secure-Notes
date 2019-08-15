@@ -8,7 +8,7 @@ class CreateNoteVC: UIViewController {
     @IBOutlet weak var createNoteButton: UIButton!
     
     var noteType:NoteType = .Lock
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
@@ -54,12 +54,17 @@ class CreateNoteVC: UIViewController {
     @IBAction func createNewNote(_ sender: Any) {
         createNoteButton.isEnabled = false
         addNote()
-        createNoteButton.isEnabled = true
-        navigationController?.popViewController(animated: true)
     }
     
     private func addNote(){
-        //guard let noteText = noteTextView.text else { return }
+        guard let noteText = noteTextView.text else { return }
+        let isLocked = noteType == .Lock ? true : false
+        DataService.sharedInstance.saveNote(message: noteText, isLocked: isLocked) { (success) in
+            if success{
+                self.navigationController?.popViewController(animated: true)
+            }
+            self.createNoteButton.isEnabled = true
+        }
     }
 }
 

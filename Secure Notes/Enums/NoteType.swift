@@ -1,6 +1,6 @@
 import Foundation
 
-enum NoteType{
+enum NoteType {
     case Lock
     case Unlock
 }

@@ -13,6 +13,7 @@
 		D111E8392304F57A00680E3B /* KeyboardBoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D111E8382304F57A00680E3B /* KeyboardBoundView.swift */; };
 		D111E83B2304F5E900680E3B /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D111E83A2304F5E900680E3B /* UIButtonExtension.swift */; };
 		D111E83D230502E000680E3B /* InsetTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D111E83C230502E000680E3B /* InsetTextView.swift */; };
+		D111E840230506F600680E3B /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D111E83F230506F600680E3B /* DataService.swift */; };
 		D1B8BDE32304C7A6009A454C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B8BDE22304C7A6009A454C /* AppDelegate.swift */; };
 		D1B8BDE52304C7A6009A454C /* NotesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B8BDE42304C7A6009A454C /* NotesVC.swift */; };
 		D1B8BDE82304C7A6009A454C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1B8BDE62304C7A6009A454C /* Main.storyboard */; };
@@ -31,6 +32,7 @@
 		D111E8382304F57A00680E3B /* KeyboardBoundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardBoundView.swift; sourceTree = "<group>"; };
 		D111E83A2304F5E900680E3B /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		D111E83C230502E000680E3B /* InsetTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsetTextView.swift; sourceTree = "<group>"; };
+		D111E83F230506F600680E3B /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		D1B8BDDF2304C7A6009A454C /* Secure Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Secure Notes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1B8BDE22304C7A6009A454C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1B8BDE42304C7A6009A454C /* NotesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesVC.swift; sourceTree = "<group>"; };
@@ -73,6 +75,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		D111E83E230506DA00680E3B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D111E83F230506F600680E3B /* DataService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		D1B8BDD62304C7A5009A454C = {
 			isa = PBXGroup;
 			children = (
@@ -93,9 +103,9 @@
 			isa = PBXGroup;
 			children = (
 				D1B8BE012304CC84009A454C /* Utilities */,
+				D111E83E230506DA00680E3B /* Services */,
 				D1B8BDFA2304C7E3009A454C /* Enums */,
 				D111E8372304F54B00680E3B /* Extensions */,
-				D1B8BDF92304C7D3009A454C /* Model */,
 				D1B8BDF82304C7C8009A454C /* View */,
 				D1B8BDF72304C7B9009A454C /* Controller */,
 				D1B8BDE22304C7A6009A454C /* AppDelegate.swift */,
@@ -125,13 +135,6 @@
 				D1B8BE002304CC7A009A454C /* Cells */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		D1B8BDF92304C7D3009A454C /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		D1B8BDFA2304C7E3009A454C /* Enums */ = {
@@ -230,6 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1B8BDE52304C7A6009A454C /* NotesVC.swift in Sources */,
+				D111E840230506F600680E3B /* DataService.swift in Sources */,
 				D111E83B2304F5E900680E3B /* UIButtonExtension.swift in Sources */,
 				D1B8BDFD2304CC31009A454C /* CreateNoteVC.swift in Sources */,
 				D111E8392304F57A00680E3B /* KeyboardBoundView.swift in Sources */,

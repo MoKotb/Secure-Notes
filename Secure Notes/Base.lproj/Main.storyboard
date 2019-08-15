@@ -17,38 +17,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DNo-wx-2jf">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DNo-wx-2jf">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="NoteCell" rowHeight="100" id="zpU-vf-DSm" customClass="NoteCell" customModule="Secure_Notes" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zpU-vf-DSm" id="SRI-Fk-kQP">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Note Text" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gzO-Ig-pcC" userLabel="Note Text">
-                                                    <rect key="frame" x="20" y="10" width="314" height="80"/>
-                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                                                    <rect key="frame" x="20" y="20" width="334" height="60"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lock" translatesAutoresizingMaskIntoConstraints="NO" id="RrF-Tx-ECI" userLabel="Lock Image">
-                                                    <rect key="frame" x="354" y="30" width="40" height="40"/>
+                                                    <rect key="frame" x="362" y="34" width="32" height="32"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="40" id="5Zj-XH-k8O"/>
-                                                        <constraint firstAttribute="width" constant="40" id="Si1-Pl-IGQ"/>
+                                                        <constraint firstAttribute="height" constant="32" id="5Zj-XH-k8O"/>
+                                                        <constraint firstAttribute="width" constant="32" id="Si1-Pl-IGQ"/>
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="gzO-Ig-pcC" firstAttribute="leading" secondItem="SRI-Fk-kQP" secondAttribute="leading" constant="20" id="A6w-Nw-hYg"/>
                                                 <constraint firstAttribute="trailing" secondItem="RrF-Tx-ECI" secondAttribute="trailing" constant="20" id="Kwb-PX-4ni"/>
-                                                <constraint firstItem="RrF-Tx-ECI" firstAttribute="leading" secondItem="gzO-Ig-pcC" secondAttribute="trailing" constant="20" id="NPE-Xe-jyk"/>
+                                                <constraint firstItem="RrF-Tx-ECI" firstAttribute="leading" secondItem="gzO-Ig-pcC" secondAttribute="trailing" constant="8" id="NPE-Xe-jyk"/>
                                                 <constraint firstItem="RrF-Tx-ECI" firstAttribute="centerY" secondItem="gzO-Ig-pcC" secondAttribute="centerY" id="Ren-SO-GsK"/>
-                                                <constraint firstAttribute="bottom" secondItem="gzO-Ig-pcC" secondAttribute="bottom" constant="10" id="jmf-ex-PAB"/>
-                                                <constraint firstItem="gzO-Ig-pcC" firstAttribute="top" secondItem="SRI-Fk-kQP" secondAttribute="top" constant="10" id="lKS-ud-ehI"/>
+                                                <constraint firstAttribute="bottom" secondItem="gzO-Ig-pcC" secondAttribute="bottom" constant="20" id="jmf-ex-PAB"/>
+                                                <constraint firstItem="gzO-Ig-pcC" firstAttribute="top" secondItem="SRI-Fk-kQP" secondAttribute="top" constant="20" id="lKS-ud-ehI"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

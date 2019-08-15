@@ -7,3 +7,6 @@ let NOTE_DETAILS_VC_IDENTIFIER = "NoteDetailsVC"
 
 //Cells
 let NOTE_CELL = "NoteCell"
+
+//Typealias
+typealias CompletionHandler = (_ Success:Bool) -> ()
