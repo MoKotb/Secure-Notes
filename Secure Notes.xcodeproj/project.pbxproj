@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D111E8312304EC8A00680E3B /* NoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D111E8302304EC8A00680E3B /* NoteCell.swift */; };
+		D111E8342304F46300680E3B /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D111E8332304F46300680E3B /* RoundedButton.swift */; };
+		D111E8362304F51800680E3B /* NoteType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D111E8352304F51800680E3B /* NoteType.swift */; };
+		D111E8392304F57A00680E3B /* KeyboardBoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D111E8382304F57A00680E3B /* KeyboardBoundView.swift */; };
+		D111E83B2304F5E900680E3B /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D111E83A2304F5E900680E3B /* UIButtonExtension.swift */; };
+		D111E83D230502E000680E3B /* InsetTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D111E83C230502E000680E3B /* InsetTextView.swift */; };
 		D1B8BDE32304C7A6009A454C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B8BDE22304C7A6009A454C /* AppDelegate.swift */; };
 		D1B8BDE52304C7A6009A454C /* NotesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B8BDE42304C7A6009A454C /* NotesVC.swift */; };
 		D1B8BDE82304C7A6009A454C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1B8BDE62304C7A6009A454C /* Main.storyboard */; };
@@ -19,6 +25,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D111E8302304EC8A00680E3B /* NoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCell.swift; sourceTree = "<group>"; };
+		D111E8332304F46300680E3B /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		D111E8352304F51800680E3B /* NoteType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteType.swift; sourceTree = "<group>"; };
+		D111E8382304F57A00680E3B /* KeyboardBoundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardBoundView.swift; sourceTree = "<group>"; };
+		D111E83A2304F5E900680E3B /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
+		D111E83C230502E000680E3B /* InsetTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsetTextView.swift; sourceTree = "<group>"; };
 		D1B8BDDF2304C7A6009A454C /* Secure Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Secure Notes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1B8BDE22304C7A6009A454C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1B8BDE42304C7A6009A454C /* NotesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesVC.swift; sourceTree = "<group>"; };
@@ -43,6 +55,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D111E8322304F40A00680E3B /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				D111E83C230502E000680E3B /* InsetTextView.swift */,
+				D111E8332304F46300680E3B /* RoundedButton.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		D111E8372304F54B00680E3B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D111E8382304F57A00680E3B /* KeyboardBoundView.swift */,
+				D111E83A2304F5E900680E3B /* UIButtonExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		D1B8BDD62304C7A5009A454C = {
 			isa = PBXGroup;
 			children = (
@@ -63,7 +93,8 @@
 			isa = PBXGroup;
 			children = (
 				D1B8BE012304CC84009A454C /* Utilities */,
-				D1B8BDFA2304C7E3009A454C /* Enum */,
+				D1B8BDFA2304C7E3009A454C /* Enums */,
+				D111E8372304F54B00680E3B /* Extensions */,
 				D1B8BDF92304C7D3009A454C /* Model */,
 				D1B8BDF82304C7C8009A454C /* View */,
 				D1B8BDF72304C7B9009A454C /* Controller */,
@@ -90,6 +121,7 @@
 		D1B8BDF82304C7C8009A454C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D111E8322304F40A00680E3B /* UI */,
 				D1B8BE002304CC7A009A454C /* Cells */,
 			);
 			path = View;
@@ -102,16 +134,18 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		D1B8BDFA2304C7E3009A454C /* Enum */ = {
+		D1B8BDFA2304C7E3009A454C /* Enums */ = {
 			isa = PBXGroup;
 			children = (
+				D111E8352304F51800680E3B /* NoteType.swift */,
 			);
-			path = Enum;
+			path = Enums;
 			sourceTree = "<group>";
 		};
 		D1B8BE002304CC7A009A454C /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				D111E8302304EC8A00680E3B /* NoteCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -196,10 +230,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1B8BDE52304C7A6009A454C /* NotesVC.swift in Sources */,
+				D111E83B2304F5E900680E3B /* UIButtonExtension.swift in Sources */,
 				D1B8BDFD2304CC31009A454C /* CreateNoteVC.swift in Sources */,
+				D111E8392304F57A00680E3B /* KeyboardBoundView.swift in Sources */,
 				D1B8BDFF2304CC57009A454C /* NoteDetailsVC.swift in Sources */,
+				D111E8342304F46300680E3B /* RoundedButton.swift in Sources */,
 				D1B8BDE32304C7A6009A454C /* AppDelegate.swift in Sources */,
 				D1B8BDEB2304C7A6009A454C /* Secure_Notes.xcdatamodeld in Sources */,
+				D111E8362304F51800680E3B /* NoteType.swift in Sources */,
+				D111E83D230502E000680E3B /* InsetTextView.swift in Sources */,
+				D111E8312304EC8A00680E3B /* NoteCell.swift in Sources */,
 				D1B8BE032304CC9B009A454C /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

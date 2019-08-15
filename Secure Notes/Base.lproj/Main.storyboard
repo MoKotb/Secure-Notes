@@ -1,24 +1,274 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mP4-tS-VLa">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--NotesVC-->
+        <!--Notes-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="NotesVC" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NotesVC" id="BYZ-38-t0r" customClass="NotesVC" customModule="Secure_Notes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DNo-wx-2jf">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="NoteCell" rowHeight="100" id="zpU-vf-DSm" customClass="NoteCell" customModule="Secure_Notes" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zpU-vf-DSm" id="SRI-Fk-kQP">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Note Text" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gzO-Ig-pcC" userLabel="Note Text">
+                                                    <rect key="frame" x="20" y="10" width="314" height="80"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lock" translatesAutoresizingMaskIntoConstraints="NO" id="RrF-Tx-ECI" userLabel="Lock Image">
+                                                    <rect key="frame" x="354" y="30" width="40" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="5Zj-XH-k8O"/>
+                                                        <constraint firstAttribute="width" constant="40" id="Si1-Pl-IGQ"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="gzO-Ig-pcC" firstAttribute="leading" secondItem="SRI-Fk-kQP" secondAttribute="leading" constant="20" id="A6w-Nw-hYg"/>
+                                                <constraint firstAttribute="trailing" secondItem="RrF-Tx-ECI" secondAttribute="trailing" constant="20" id="Kwb-PX-4ni"/>
+                                                <constraint firstItem="RrF-Tx-ECI" firstAttribute="leading" secondItem="gzO-Ig-pcC" secondAttribute="trailing" constant="20" id="NPE-Xe-jyk"/>
+                                                <constraint firstItem="RrF-Tx-ECI" firstAttribute="centerY" secondItem="gzO-Ig-pcC" secondAttribute="centerY" id="Ren-SO-GsK"/>
+                                                <constraint firstAttribute="bottom" secondItem="gzO-Ig-pcC" secondAttribute="bottom" constant="10" id="jmf-ex-PAB"/>
+                                                <constraint firstItem="gzO-Ig-pcC" firstAttribute="top" secondItem="SRI-Fk-kQP" secondAttribute="top" constant="10" id="lKS-ud-ehI"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="lockImage" destination="RrF-Tx-ECI" id="1jM-GC-pvy"/>
+                                            <outlet property="noteText" destination="gzO-Ig-pcC" id="wQa-9r-wPA"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="DNo-wx-2jf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="NHc-TZ-3Eq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DNo-wx-2jf" secondAttribute="bottom" id="bZV-Ho-vjQ"/>
+                            <constraint firstItem="DNo-wx-2jf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="dpS-Ol-5Fn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DNo-wx-2jf" secondAttribute="trailing" id="zwJ-AR-AoX"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Notes" id="V7c-ur-JbQ">
+                        <barButtonItem key="backBarButtonItem" title=" " id="9Hq-Qd-hIy"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="MMj-oE-ifT">
+                            <connections>
+                                <action selector="addNewNote:" destination="BYZ-38-t0r" id="MEk-kD-vw8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="notesTable" destination="DNo-wx-2jf" id="G8a-zw-09l"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1042.0289855072465" y="97.767857142857139"/>
+        </scene>
+        <!--Note DetailsVC-->
+        <scene sceneID="qAM-z3-SlF">
+            <objects>
+                <viewController storyboardIdentifier="NoteDetailsVC" id="P7q-d7-sSF" customClass="NoteDetailsVC" customModule="Secure_Notes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sEO-t0-AQT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Note Text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="ewX-m3-BwE">
+                                <rect key="frame" x="20" y="64" width="374" height="27.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7g5-0U-TAJ" userLabel="Lock Note Button">
+                                <rect key="frame" x="0.0" y="836" width="414" height="60"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="7Ef-uz-nQI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="22"/>
+                                <state key="normal" title="Lock Note">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="onLockPressed:" destination="P7q-d7-sSF" eventType="touchUpInside" id="u1F-zd-tgD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="tpP-fh-Ts1" firstAttribute="trailing" secondItem="ewX-m3-BwE" secondAttribute="trailing" constant="20" id="3uN-tL-iN8"/>
+                            <constraint firstItem="7g5-0U-TAJ" firstAttribute="leading" secondItem="tpP-fh-Ts1" secondAttribute="leading" id="6Zo-wc-Psz"/>
+                            <constraint firstItem="ewX-m3-BwE" firstAttribute="top" secondItem="tpP-fh-Ts1" secondAttribute="top" constant="20" id="6nS-Yj-6Bl"/>
+                            <constraint firstAttribute="bottom" secondItem="7g5-0U-TAJ" secondAttribute="bottom" id="8jU-Or-g3l"/>
+                            <constraint firstItem="7g5-0U-TAJ" firstAttribute="trailing" secondItem="tpP-fh-Ts1" secondAttribute="trailing" id="UZc-A8-Rfz"/>
+                            <constraint firstItem="ewX-m3-BwE" firstAttribute="leading" secondItem="tpP-fh-Ts1" secondAttribute="leading" constant="20" id="iri-8s-aaf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tpP-fh-Ts1"/>
+                    </view>
+                    <connections>
+                        <outlet property="lockButton" destination="7g5-0U-TAJ" id="AkI-Wj-NK6"/>
+                        <outlet property="noteText" destination="ewX-m3-BwE" id="or2-cG-4oe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Ch-Lh-KDk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1042" y="842"/>
+        </scene>
+        <!--Create NoteVC-->
+        <scene sceneID="MnN-Pb-2K1">
+            <objects>
+                <viewController storyboardIdentifier="CreateNoteVC" id="1LU-GG-Una" customClass="CreateNoteVC" customModule="Secure_Notes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mXM-vN-svN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="iKY-zm-30k">
+                                <rect key="frame" x="20" y="64" width="374" height="366"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" text="What's on your mind?" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="s7G-3b-spA" userLabel="Note Text" customClass="InsetTextView" customModule="Secure_Notes" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="300"/>
+                                        <color key="backgroundColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="300" id="XEI-bc-F6v"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardAppearance="alert" returnKeyType="done"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="IGP-Ws-T68" userLabel="Lock Status Stack View">
+                                        <rect key="frame" x="0.0" y="316" width="374" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oDD-ZE-nf8" userLabel="Lock Button" customClass="RoundedButton" customModule="Secure_Notes" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="179" height="50"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="22"/>
+                                                <state key="normal" title="Lock">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="lockNotePressed:" destination="1LU-GG-Una" eventType="touchUpInside" id="2mo-sy-TPe"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FNb-Cs-6fD" userLabel="unlock Button" customClass="RoundedButton" customModule="Secure_Notes" customModuleProvider="target">
+                                                <rect key="frame" x="195" y="0.0" width="179" height="50"/>
+                                                <color key="backgroundColor" white="1" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="22"/>
+                                                <state key="normal" title="Unlock">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="unlockNotePressed:" destination="1LU-GG-Una" eventType="touchUpInside" id="qoa-lT-mxb"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="TDK-kd-e9x"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aaO-by-NNy" userLabel="Create Note Button">
+                                <rect key="frame" x="0.0" y="836" width="414" height="60"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="qcq-af-nRH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="22"/>
+                                <state key="normal" title="Create Note">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="createNewNote:" destination="1LU-GG-Una" eventType="touchUpInside" id="mHU-xy-UDe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="iKY-zm-30k" firstAttribute="top" secondItem="7gv-QM-gxK" secondAttribute="top" constant="20" id="DlM-kV-iBL"/>
+                            <constraint firstAttribute="bottom" secondItem="aaO-by-NNy" secondAttribute="bottom" id="Gkr-aP-cel"/>
+                            <constraint firstItem="7gv-QM-gxK" firstAttribute="trailing" secondItem="iKY-zm-30k" secondAttribute="trailing" constant="20" id="Nfd-bA-9Zw"/>
+                            <constraint firstItem="aaO-by-NNy" firstAttribute="leading" secondItem="7gv-QM-gxK" secondAttribute="leading" id="Rkw-aZ-h7X"/>
+                            <constraint firstItem="iKY-zm-30k" firstAttribute="leading" secondItem="7gv-QM-gxK" secondAttribute="leading" constant="20" id="lOh-ez-2Cf"/>
+                            <constraint firstItem="aaO-by-NNy" firstAttribute="trailing" secondItem="7gv-QM-gxK" secondAttribute="trailing" id="mi6-3N-0ai"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7gv-QM-gxK"/>
+                    </view>
+                    <connections>
+                        <outlet property="createNoteButton" destination="aaO-by-NNy" id="1kA-CC-H1t"/>
+                        <outlet property="lockButton" destination="oDD-ZE-nf8" id="npc-i8-TdL"/>
+                        <outlet property="noteTextView" destination="s7G-3b-spA" id="xrw-2w-OtC"/>
+                        <outlet property="unlockButton" destination="FNb-Cs-6fD" id="JT8-1H-Ymc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sB6-Cw-s8T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2011.594202898551" y="97.767857142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="jPd-qI-a3x">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mP4-tS-VLa" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="2ms-v1-qlT">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="24"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="24"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Oi1-7e-8rv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W1k-ya-zwl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="68" y="98"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="lock" width="170.5" height="170.5"/>
+    </resources>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>
